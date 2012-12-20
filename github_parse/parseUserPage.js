@@ -1,7 +1,7 @@
-var links = [];
-$('.commits code a').each(function() {
-    links.push($(this).attr('href'));
-});
+var links = $('.commits code a')
+    .map(function(){
+        return $(this).attr('href');
+    }).get();
 
 var changeSets = [];
 
