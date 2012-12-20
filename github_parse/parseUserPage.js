@@ -5,7 +5,10 @@ $('.commits code a').each(function() {
 
 var changeSets = [];
 
-var numberPattern = /[0-9]+/g;
+function getNumber (changeSetPart) {
+    var numberPattern = /[0-9]+/g;
+    return $(changeSetPart).text().replace(',', '').match(numberPattern)[0];
+}
 
 $.each(links, function (index, value) {
     $('<p>').load(value + ' ' + '#toc .explain', function() {
@@ -13,9 +16,9 @@ $.each(links, function (index, value) {
 
         changeSets.push(
             {
-                'changed': $($changeSet[0]).text().match(numberPattern)[0],
-                'additions': $($changeSet[1]).text().match(numberPattern)[0],
-                'deletions': $($changeSet[2]).text().match(numberPattern)[0]
+                'changed': getNumber($changeSet[0]),
+                'additions': getNumber($changeSet[1]),
+                'deletions': getNumber($changeSet[2])
             }
         );
     });
