@@ -1,0 +1,40 @@
+from setuptools import setup
+
+setup(
+    name='hero-tmpl',
+    version='1.0',
+    long_description=__doc__,
+    packages=['hero_tmpl'],
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=[
+        'Flask==0.8',
+        'Flask-Login==0.1.2',
+        'Flask-Mail==0.6.1',
+        'Flask-Principal==0.2',
+        'Flask-Security==1.2.2',
+        'Flask-WTF==0.6',
+        'Jinja2==2.6',
+        'WTForms==1.0.1',
+        'Werkzeug==0.8.3',
+        'blinker==1.2',
+        'chardet==1.0.1',
+        'distribute==0.6.24',
+        'gevent==0.13.6',
+        'greenlet==0.3.4',
+        'gunicorn==0.13.4',
+        'hero-tmpl==1.0',
+        'lamson==1.1',
+        'lockfile==0.9.1',
+        'mock==0.8.0',
+        'nose==1.1.2',
+        'passlib==1.6',
+        'py-bcrypt==0.2',
+        'python-daemon==1.6',
+        'wsgiref==0.1.2',
+        'pymongo==2.2',
+        'mongoengine==0.6.10',
+        'flask-mongoengine==0.3',
+        'pystache==0.5.2'
+    ]
+)

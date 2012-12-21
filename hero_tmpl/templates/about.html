@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% set title = '%s %s' % ('About', config['X_HT_PROJECT_NAME']) %}
+
+{% block content %}
+	<div class="marketing">
+		<h1>{{ config['X_HT_PROJECT_NAME'] }}<h1>
+		<p class="marketing-byline">
+			{{ config['X_HT_PROJECT_DESCRIPTION'] }}
+		</p>
+
+		<hr/>
+		
+		<p>
+			<i class="icon-pencil"></i>
+			{{ config['X_HT_PROJECT_NAME'] }} is built with <a href="http://hero-tmpl.com">hero-tmpl</a> a base template for <a href="http://www.heroku.com">heroku</a>, <a href="http://flask.pocoo.org/">flask</a>, <a href="http://jinja.pocoo.org/docs/">Jinja2</a>, and <a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a> which uses
+			<a href="http://glyphicons.com/">Glyphicons</a> and much of the work of <a href="http://html5boilerplate.com/">HTML 5 Boilerplate</a>.
+		</p>
+	</div>
+{% endblock %}

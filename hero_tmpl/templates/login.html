@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% set title = "Login" %}
+
+{% block content %}
+    <form class="well" action="{{ url_for('auth.authenticate') }}" method="POST" name="login_form">
+        {% include "_messages.html" %}
+
+        {{ form.hidden_tag() }}
+
+        {{ form.username.label(text="Email") }} {{ form.username(type="email") }}
+        {{ form.password.label }} {{ form.password(type="password") }}
+        <span class="help-block">not case sensitive</span>
+
+        <div>
+            <label class="checkbox"> 
+                {{ form.remember(class_="checkbox") }} Remember Me
+            </label>
+        </div>
+
+        {{ form.next }}
+        {{ form.submit(class_="btn") }}
+    </form>
+{% endblock %}
